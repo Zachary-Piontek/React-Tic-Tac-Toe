@@ -1,0 +1,10 @@
+.box {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border: 5px solid antiquewhite;
+    border-radius: 5px;
+    color: yellow;
+    font-size: 3rem;
+}
