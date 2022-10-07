@@ -9,7 +9,7 @@ export default function Board() {
   return (
     <>
       <div>
-        {!active && <button onClick={resetGame}>Play Again</button>}
+        {!active && <button onClick={resetGame}>Game Reset</button>}
         <h3>Your turn {gameMessage}</h3>
       </div>
       <div className='board'>

@@ -101,11 +101,12 @@ const GameProvider = ({ children }) => {
 
   return (
     <GameContext.Provider
-      value={{ board, setBoard, currentPlayer, changeSpace, gameMessage, resetGame, active }}
+      value={{ board, setBoard, currentPlayer, setActive, changeSpace, gameMessage, resetGame, active }}
     >
       {children}
     </GameContext.Provider>
   );
+  
 };
 
 export { GameContext, GameProvider };

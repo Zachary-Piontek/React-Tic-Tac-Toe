@@ -2,8 +2,8 @@
     display: grid;
     width: 50vw;
     height: 50vh;
-    color: white;
-    border: 5px solid white;
+    border: 5px solid black;
     border-radius: 5px;
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    justify-self: center;
   }
