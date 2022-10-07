@@ -1,15 +1,11 @@
 import { useContext } from 'react';
 import { GameContext } from '../context/GameContext';
 
-export default function Box({ box }) {
-  const { area, board } = useContext(GameContext);
-  function Click() {
-    area(board);
-  }
-
+export default function Box({ box, content }) {
+  const { update } = useContext(GameContext);
   return (
-    <div>
-      <button onClick={Click}>{board[box]}</button>
+    <div onClick={() => update(box)} id={box}>
+      {content}
     </div>
   );
 
