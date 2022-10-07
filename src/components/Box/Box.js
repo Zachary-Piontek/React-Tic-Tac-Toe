@@ -3,11 +3,10 @@ import { GameContext } from '../context/GameContext';
 import './box.css';
 
 export default function Box({ space, content }) {
-  const { update } = useContext(GameContext);
+  const { changeSpace } = useContext(GameContext);
   return (
-    <div className="box" onClick={() => update(space)} id={space}>
+    <div onClick={() => changeSpace(space)} id={space} className="box">
       {content}
     </div>
   );
-
 }

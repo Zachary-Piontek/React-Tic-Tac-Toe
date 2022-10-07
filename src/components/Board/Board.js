@@ -4,13 +4,19 @@ import './board.css';
 import Box from '../Box/Box';
 
 export default function Board() {
-  const { board } = useContext(GameContext);
+  const { board, gameMessage, resetGame, active } = useContext(GameContext);
 
   return (
-    <div className='board'>
-      {board.map(({ space, content }) => (
-        <Box key={space} space={space} content={content} />
-      ))}
-    </div>
+    <>
+      <div>
+        {!active && <button onClick={resetGame}>Play Again</button>}
+        <h3>Your turn {gameMessage}</h3>
+      </div>
+      <div className='board'>
+        {board.map(({ space, content }) => (
+          <Box key={space} space={space} content={content} />
+        ))}
+      </div>
+    </>
   );
 }
