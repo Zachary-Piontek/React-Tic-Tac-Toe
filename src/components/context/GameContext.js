@@ -11,7 +11,7 @@ const GameProvider = ({ children }) => {
   const [gameMessage, setGameMessage] = ('');
 
   return (
-    <GameContext.Provider value={{ gameBoard, setGameBoard }}>
+    <GameContext.Provider value={{ gameBoard, setGameBoard, currentPlayer, setCurrentPlayer, active, setActive, gameMessage, setGameMessage }}>
       {children}
     </GameContext.Provider>
   );

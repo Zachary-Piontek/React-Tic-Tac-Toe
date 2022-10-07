@@ -1,10 +1,11 @@
 import { useContext } from 'react';
 import { GameContext } from '../context/GameContext';
+import './box.css';
 
-export default function Box({ box, content }) {
+export default function Box({ space, content }) {
   const { update } = useContext(GameContext);
   return (
-    <div onClick={() => update(box)} id={box}>
+    <div className="box" onClick={() => update(space)} id={space}>
       {content}
     </div>
   );
